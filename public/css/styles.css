@@ -1,0 +1,551 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none; }
+  
+  html {
+    font-size: 62.5%; }
+  
+  body {
+    font-size: 1.4rem;
+    max-width: 100vw;
+    overflow-x: hidden;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+    color: #24292e; }
+  
+  ul {
+    list-style: none; }
+  
+  a {
+    text-decoration: none; }
+  
+  .feather {
+    width: 2rem;
+    height: 2rem;
+    color: currentColor; }
+  
+  .caret {
+    height: 1.4rem;
+    width: 1.4rem; }
+  
+  .mb-2 {
+    margin-bottom: 1.6rem; }
+  
+  .mt-2 {
+    margin-top: 1.6rem; }
+  
+  .mr-2 {
+    margin-right: 1.6rem; }
+  
+  .ml-2 {
+    margin-left: 1.6rem; }
+  
+  .mb-1 {
+    margin-bottom: .8rem; }
+  
+  .mt-1 {
+    margin-top: .8rem; }
+  
+  .mr-1 {
+    margin-right: .8rem; }
+  
+  .ml-1 {
+    margin-left: .8rem; }
+  
+  .black {
+    color: #24292e; }
+  
+  .grey {
+    color: #586069; }
+  
+  @media screen and (max-width: 770px) {
+    .hide-sm {
+      display: none !important; } }
+  
+  @media screen and (min-width: 771px) {
+    .show-sm {
+      display: none !important; } }
+  
+  .gh-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    cursor: pointer;
+    border: solid 1px #e1e4e8;
+    padding: .65rem 1.5rem;
+    border-radius: .5rem;
+    transition: .3s ease-in all;
+    font-weight: 500; }
+    .gh-btn--light {
+      background-color: #fafbfc;
+      color: #24292e; }
+      .gh-btn--light:hover {
+        background: rgba(88, 96, 105, 0.065); }
+    .gh-btn--primary {
+      background: #2ea44f;
+      color: #fafbfc;
+      border: solid 1px rgba(88, 96, 105, 0.3); }
+      .gh-btn--primary:hover {
+        background: #2c974b; }
+    .gh-btn--block {
+      display: flex;
+      width: 100%; }
+    .gh-btn .icon {
+      width: 1.6rem;
+      height: 1.6rem; }
+    .gh-btn--sm {
+      font-size: 1.2rem; }
+      .gh-btn--sm .icon {
+        width: 1.4rem;
+        height: 1.4rem; }
+  
+  .gh-form--inline {
+    display: flex;
+    align-items: center;
+    width: 100%; }
+  
+  .gh-form__group {
+    margin-right: 1.6rem;
+    position: relative;
+    flex: 1;
+    min-width: 16rem; }
+    @media screen and (max-width: 770px) {
+      .gh-form__group {
+        min-width: 15rem; } }
+    .gh-form__group.gh__header__nav__search::after {
+      position: absolute;
+      display: block;
+      height: 70%;
+      content: "";
+      width: 1.8rem;
+      border: solid 1px rgba(225, 228, 232, 0.3);
+      border-radius: .3rem;
+      z-index: 100;
+      right: .5rem;
+      top: 17%;
+      box-sizing: border-box; }
+    .gh-form__group.gh__header__nav__search::before {
+      position: absolute;
+      content: "";
+      height: 35%;
+      width: 1px;
+      background: rgba(225, 228, 232, 0.5);
+      right: 1.4rem;
+      top: 50%;
+      transform: rotate(25deg) translate(-1px, -40%); }
+  
+  .gh-form__input {
+    border: solid 1px #e1e4e8;
+    background: #fff;
+    padding: .7rem 1.2rem;
+    border-radius: .6rem;
+    font-size: 1.4rem;
+    position: relative;
+    color: #24292e;
+    transition: .4s ease all;
+    width: 100%; }
+    .gh-form__input::placeholder {
+      color: #586069; }
+    .gh-form__input:focus, .gh-form__input:active {
+      border-color: #006eed;
+      box-shadow: 0 0 0 3px rgba(0, 110, 237, 0.2); }
+    .gh-form__input--dark {
+      background: rgba(255, 255, 255, 0.125);
+      border-color: transparent;
+      color: #fafbfc;
+      padding: .5rem 1.2rem; }
+      .gh-form__input--dark:focus, .gh-form__input--dark:active {
+        background: #fff;
+        border-color: transparent;
+        color: #24292e; }
+        .gh-form__input--dark:focus::placeholder, .gh-form__input--dark:active::placeholder {
+          color: #586069; }
+      .gh-form__input--dark::placeholder {
+        color: #e1e4e8; }
+  
+  .gh__header {
+    background: #24292e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .9rem 1.6rem;
+    color: #fafbfc;
+    position: relative; }
+    @media screen and (max-width: 770px) {
+      .gh__header {
+        padding: 1.45rem 1.6rem; } }
+    @media screen and (min-width: 771px) {
+      .gh__header__logo {
+        margin-right: 1.5rem; } }
+    .gh__header__logo svg {
+      width: 3.2rem;
+      height: 3.2rem;
+      fill: currentColor; }
+    .gh__header__left {
+      display: flex;
+      align-items: center; }
+    .gh__header__nav {
+      display: flex;
+      align-items: center;
+      flex: 1; }
+      .gh__header__nav__list {
+        display: flex;
+        align-items: center; }
+      .gh__header__nav__search {
+        margin-right: 1.5rem; }
+      .gh__header__nav__item {
+        padding: .5rem;
+        margin-right: .5rem; }
+      .gh__header__nav button, .gh__header__nav__link {
+        color: currentColor;
+        font-weight: 500;
+        transition: .2s ease-in all; }
+        .gh__header__nav button:hover, .gh__header__nav__link:hover {
+          color: rgba(250, 251, 252, 0.8); }
+      .gh__header__nav .gh-form {
+        width: 100%; }
+        @media screen and (min-width: 771px) {
+          .gh__header__nav .gh-form {
+            max-width: 25rem; } }
+      @media screen and (max-width: 770px) {
+        .gh__header__nav {
+          position: absolute;
+          width: 100%;
+          padding: 1.6rem;
+          background: #24292e;
+          flex-direction: column;
+          left: 0;
+          top: 100%;
+          z-index: 15000;
+          height: 0;
+          overflow: hidden;
+          display: none;
+          transition: .3s ease-in all; }
+          .gh__header__nav__search {
+            padding: 0 0 1.6rem 0;
+            border-bottom: 1px solid rgba(250, 251, 252, 0.2); }
+            .gh__header__nav__search::before, .gh__header__nav__search::after {
+              display: none !important; }
+          .gh__header__nav__list {
+            flex-direction: column;
+            width: 100%; }
+          .gh__header__nav__item {
+            padding: 1rem;
+            margin-right: 0;
+            display: flex;
+            align-items: center;
+            width: 100%; }
+            .gh__header__nav__item:not(:last-child) {
+              border-bottom: 1px solid rgba(250, 251, 252, 0.2); } }
+    .gh__header__actions {
+      display: flex;
+      align-items: center; }
+      .gh__header__actions__action {
+        display: flex;
+        align-items: center;
+        position: relative; }
+        .gh__header__actions__action:not(:last-child) {
+          margin-right: 1rem; }
+        .gh__header__actions__action .feather:not(.caret) {
+          width: 1.8rem;
+          height: 1.8rem; }
+        .gh__header__actions__action.notif::after {
+          position: absolute;
+          content: "";
+          height: 1rem;
+          width: 1rem;
+          border-radius: 50%;
+          background: #006eed;
+          background-image: linear-gradient(#54a3ff, #006eed);
+          border: solid 2px #24292e;
+          top: -5px;
+          right: -2px; }
+    .gh__header__user {
+      background: transparent;
+      border: none;
+      display: flex;
+      align-items: center;
+      color: #fafbfc; }
+      .gh__header__user__img {
+        width: 2rem;
+        height: 2rem;
+        margin-right: .5rem; }
+        .gh__header__user__img img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%; }
+    .gh__header__toggle {
+      display: block;
+      cursor: pointer;
+      position: relative;
+      padding: 1.2rem .2rem; }
+      .gh__header__toggle-checkbox {
+        display: none; }
+        .gh__header__toggle-checkbox:checked ~ .gh__header__nav {
+          display: block;
+          height: auto; }
+      .gh__header__toggle__inner {
+        position: relative;
+        height: .2rem;
+        width: 2rem;
+        background-color: #fafbfc;
+        transition: all .25s; }
+        .gh__header__toggle__inner:hover {
+          background-color: rgba(250, 251, 252, 0.8); }
+          .gh__header__toggle__inner:hover::before, .gh__header__toggle__inner:hover::after {
+            background-color: rgba(250, 251, 252, 0.8); }
+        .gh__header__toggle__inner::before, .gh__header__toggle__inner::after {
+          content: "";
+          position: absolute;
+          display: block;
+          height: .2rem;
+          width: 2rem;
+          background-color: #fafbfc;
+          transition: all .25s; }
+        .gh__header__toggle__inner::before {
+          top: -.7rem; }
+        .gh__header__toggle__inner::after {
+          top: .7rem; }
+  
+  .gh-tabs {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding: 0 1.6rem; }
+    .gh-tabs__container {
+      border-bottom: solid 1px #e1e4e8;
+      margin-top: 2.4rem;
+      background: #fff;
+      z-index: 1000; }
+      .gh-tabs__container__inner {
+        display: flex;
+        align-items: center;
+        padding: 0 1.6rem;
+        max-width: 128rem;
+        margin: 0 auto;
+        position: relative; }
+        @media screen and (min-width: 771px) {
+          .gh-tabs__container__inner::before {
+            content: "";
+            position: relative;
+            display: block;
+            left: 0;
+            width: 25%;
+            padding: 0 1.6rem;
+            box-sizing: border-box; } }
+      .gh-tabs__container.fixed {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        margin-top: 0; }
+    .gh-tabs__user {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      position: absolute;
+      left: 3.2rem;
+      visibility: hidden; }
+      @media screen and (max-width: 770px) {
+        .gh-tabs__user {
+          display: none; } }
+      .gh-tabs__user.visible {
+        visibility: visible; }
+      .gh-tabs__user__img {
+        width: 3rem;
+        height: 3rem;
+        margin-right: .5rem; }
+        .gh-tabs__user__img img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%; }
+    .gh-tabs__tab__link {
+      padding: 1rem 1.6rem;
+      line-height: 2.5rem;
+      display: flex;
+      align-items: center;
+      color: #24292e;
+      cursor: pointer;
+      border-bottom: solid 2px transparent;
+      transition: .2s ease-in all; }
+      .gh-tabs__tab__link:not(.active):hover {
+        border-color: #e1e4e8; }
+      .gh-tabs__tab__link.active {
+        border-color: #f9826c;
+        font-weight: 500; }
+        .gh-tabs__tab__link.active .icon {
+          color: #24292e; }
+      .gh-tabs__tab__link .icon {
+        color: #959da5;
+        margin-right: .5rem;
+        width: 1.8rem;
+        height: 1.8rem; }
+  
+  .pill {
+    font-size: 1.1rem;
+    padding: .3rem .7rem;
+    border-radius: 30px;
+    display: inline-block;
+    background: #e1e4e8;
+    margin-left: 1rem;
+    line-height: 1.1rem; }
+  
+  .gh-main {
+    display: flex;
+    align-items: center;
+    align-items: flex-start;
+    padding: 0 1.6rem;
+    max-width: 128rem;
+    margin: 0 auto;
+    flex-wrap: wrap; }
+    @media screen and (max-width: 770px) {
+      .gh-main {
+        flex-direction: column; } }
+    .gh-main__profile {
+      padding: 0 1.6rem;
+      min-width: 20rem; }
+      @media screen and (max-width: 770px) {
+        .gh-main__profile {
+          width: 100%;
+          margin-top: 2rem; } }
+      @media screen and (min-width: 771px) {
+        .gh-main__profile {
+          width: 25%;
+          margin-top: -3.2rem; } }
+      .gh-main__profile__user {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        align-items: flex-start; }
+        @media screen and (max-width: 770px) {
+          .gh-main__profile__user {
+            flex-direction: row;
+            align-items: center; } }
+        .gh-main__profile__user__img {
+          width: 100%;
+          padding-top: 100%;
+          position: relative;
+          z-index: 1050; }
+          @media screen and (max-width: 770px) {
+            .gh-main__profile__user__img {
+              width: 6rem;
+              padding-top: 6rem;
+              margin-right: 1.6rem; } }
+          .gh-main__profile__user__img img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            object-fit: cover;
+            border: solid #e1e4e8 1px; }
+        .gh-main__profile__user__name {
+          padding: 1.6rem 0; }
+          .gh-main__profile__user__name h1 {
+            font-size: 2.6rem;
+            font-weight: 600; }
+            @media screen and (max-width: 770px) {
+              .gh-main__profile__user__name h1 {
+                font-size: 2rem; } }
+          .gh-main__profile__user__name .username {
+            color: #586069;
+            font-size: 2rem;
+            font-weight: 300;
+            line-height: 2.4rem; }
+            @media screen and (max-width: 770px) {
+              .gh-main__profile__user__name .username {
+                font-size: 1.6rem;
+                line-height: 1.8rem; } }
+      .gh-main__profile__about {
+        font-size: 1.6rem;
+        margin-bottom: 1.6rem; }
+      .gh-main__profile__stats {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.6rem;
+        flex-wrap: wrap; }
+        .gh-main__profile__stats a {
+          color: #586069;
+          display: flex;
+          align-items: center;
+          transition: .2s ease-in all;
+          font-weight: 500; }
+          .gh-main__profile__stats a:hover {
+            color: #006eed; }
+            .gh-main__profile__stats a:hover .stat-count {
+              color: #006eed; }
+          .gh-main__profile__stats a .icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-right: .3rem; }
+          .gh-main__profile__stats a .stat-count {
+            color: #24292e;
+            margin-right: .3rem; }
+      .gh-main__profile__extra-details__detail {
+        display: flex;
+        align-items: center;
+        margin-bottom: .5rem; }
+        .gh-main__profile__extra-details__detail .icon {
+          width: 16px;
+          height: 16px;
+          color: #586069;
+          margin-right: .5rem; }
+    .gh-main__repos {
+      padding: 0 1.6rem;
+      min-width: 250px;
+      flex: 1; }
+      @media screen and (max-width: 770px) {
+        .gh-main__repos {
+          width: 100%; } }
+      .gh-main__repos__search {
+        padding: 1.6rem 0;
+        border-bottom: 1px solid #e1e4e8;
+        flex-wrap: wrap; }
+        .gh-main__repos__search .gh-btn {
+          flex-shrink: 1;
+          margin-bottom: 1rem; }
+        .gh-main__repos__search .gh-form__group {
+          margin-bottom: 1rem; }
+      .gh-main__repos__repo {
+        padding: 2.5rem 0;
+        border-bottom: 1px solid #e1e4e8; }
+        .gh-main__repos__repo__top {
+          display: flex;
+          align-items: center;
+          align-items: flex-start;
+          justify-content: space-between; }
+        .gh-main__repos__repo__details {
+          max-width: 70%; }
+          .gh-main__repos__repo__details .title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600; }
+            @media screen and (max-width: 770px) {
+              .gh-main__repos__repo__details .title {
+                font-size: 1.7rem; } }
+            .gh-main__repos__repo__details .title a {
+              color: #0366d6;
+              transition: .2s ease-in all; }
+              .gh-main__repos__repo__details .title a:hover {
+                text-decoration: underline; }
+          .gh-main__repos__repo__details .desc {
+            color: #586069;
+            margin-bottom: 1.6rem; }
+          .gh-main__repos__repo__details__extra {
+            display: flex;
+            align-items: center;
+            color: #586069;
+            font-size: 1.2rem; }
+            .gh-main__repos__repo__details__extra .detail {
+              display: flex;
+              align-items: center; }
+              .gh-main__repos__repo__details__extra .detail .feather {
+                width: 1.4rem;
+                height: 1.4rem;
+                margin-right: .5rem; }
+              .gh-main__repos__repo__details__extra .detail:not(:last-child) {
+                margin-right: 1rem; }
+  
